@@ -231,6 +231,7 @@ export default function createTippy(reference, collectionOptions) {
     }
 
     tip.popper = createPopperElement(tip.id, newOptions)
+    tip.popper._tippy = tip
     tip.popperChildren = getChildren(tip.popper)
     tip.popperInstance && (tip.popperInstance.popper = tip.popper)
     tip.options = newOptions
